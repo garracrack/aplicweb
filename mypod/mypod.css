@@ -1,0 +1,14 @@
+	h1{
+		font-size: 30px;
+		color: blue;
+	}
+	h1, h2{
+		color:green;
+	}
+
+	.parrafoAmarillo{
+		color:blue;
+	}
+	p{
+		color:red;
+	}	

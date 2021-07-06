@@ -2,15 +2,36 @@
 <html lang="es">
 	<head>
 		<title>EJERCICIO LISTA</title>
+		<style>
+			.romano{
+				list-style-type: upper-roman;
+			}
+
+			.circulito{
+				list-style-type: circle;
+			}
+			.cuadradito{
+				list-style-type: square;
+			}
+			.espada{
+				list-style-image: url(espada2.jpg);
+				
+			}
+			.letra{
+				list-style-image:none;
+				list-style-type: lower-alpha;
+			}
+		</style>
+		
 	</head>
 	<body>
 		<hr>
-		<ol>
+		<ol class="romano">
 			<li>Elemento 1
-				<ul>
+				<ul class="cuadradito">
 					<li>Elemento 1.1</li>
 					<li>Elemento 1.2
-						<ul>
+						<ul class="circulito">
 							<li>Elemento 1.2.1</li>
 							<li>Elemento 1.2.2</li>
 							<li>Elemento 1.2.3</li>
@@ -23,11 +44,11 @@
 				</ul>
 			</li>
 			<li>Elemento 2
-				<ul>
+				<ul class="espada">
 					<li>Elemento 2.1</li>
 					<li>Elemento 2.2</li>
 					<li>Elemento 2.3
-						<ol>
+						<ol class="letra">
 							<li>Elemento 2.3.1</li>
 							<li><a href="http://www.google.es"><img src="segway2.jpg" width="50px" height="50px" alt="imagen"></a></li>
 						</ol>
