@@ -3,21 +3,67 @@
   <head>
     <title>Head First Lounge Directions</title>
 	<link rel="stylesheet" href="../lounge.css">
+	<style>
+		label{
+			display: block;
+		}
+		input:focus
+		{
+			border: 2px solid #000;
+			background: #F3F3F3;
+		} 
+	</style>
   </head>
   <body>
 	
+	
 	<form name="formu" action="pagina2.html" method="get" >
-		<label>Nombre Usuario:<input name="usuario" type="text"></label><br>
-		<label for="usuario">Contraseña:</label>
-		<input name="usuario" type="password"><br>
-		Sexo:<label>HOMBRE<input name="sexo" type="radio" value="H"></label>
-		<label>MUJER<input name="sexo" type="radio" value="M"></label>
-		<br>Aficiones:
-		<label>Fútbol<input name="aficiones" type="checkbox" value="F"></label>
-		<label>Tenis<input name="aficiones" type="checkbox" value="T"></label>
-		<label>Baloncesto<input name="aficiones" type="checkbox" value="B"></label>
-		<label>Cine<input name="aficiones" type="checkbox" value="C"></label>	
-		<label>Viajar<input name="aficiones" type="checkbox" value="V"></label>
+		<fieldset>
+			<legend>Datos Personales</legend>
+			<label>Nombre Usuario:<input required placeholder="Inserta tu nombre" name="usuario" type="text"></label>
+			<label for="contrasenya">Contraseña:
+			<input autofocus required name="contrasenya" type="password">
+			</label>
+			<label>Sexo:HOMBRE<input checked name="sexo" type="radio" value="H">
+			MUJER<input name="sexo" type="radio" value="M"></label>
+			Aficiones:
+			<label>Fútbol<input checked name="aficiones" type="checkbox" value="F"></label>
+			<label>Tenis<input name="aficiones" type="checkbox" value="T"></label>
+			<label>Baloncesto<input checked name="aficiones" type="checkbox" value="B"></label>
+			<label>Cine<input name="aficiones" type="checkbox" value="C"></label>	
+			<label>Viajar<input name="aficiones" type="checkbox" value="V"></label>
+		</fieldset>
+		
+		<fieldset>
+		<legend>Acciones</legend>
+		<input type="reset" name="borrar" value="BORRAR">
+		<input type="button" name="boton" value="AUXILIAR">
+		<button name="boton" type="button">AUXILIAR2</button>
+		<input type="submit" name="enviar" value="ENVIAR">
+		
+		<input name="fichero" type="file">
+		
+		<input type="hidden" name="oculto" value="2">
+		</fieldset>
+		
+		<fieldset>
+		<legend>Datos Extras</legend>
+		<label> PAIS:
+			<select name="pais">
+				<option value=""></option>
+				<option selected value="ES">ESPAÑA</option>
+				<option value="FR">FRANCIA</option>
+				<option value="AL">ALEMANIA</option>
+				<option value="AR">ARGENTINA</option>
+			</select>
+		</label>
+		<label>OPINA:
+			<textarea name="opinion" rows=5 cols=5>
+			</textarea>
+		</label>
+		Edad:<input name="edad" type="number" max=110 min=1>
+		Fecha Nacimiento:<input name="fechaNac" type="date">
+		</fieldset>
 	</form>
 	
 	
