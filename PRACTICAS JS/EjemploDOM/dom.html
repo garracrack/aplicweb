@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="content-type" content="text/html" />
+<meta name="author" content="isabel" />
+<title>Untitled 2</title>
+
+</head>
+<body>
+	<div id="informacion" style= "border:thin solid silver; padding:.5em"></div>
+	<h1>Ejemplo1</h1>
+	<p>Este es el primer párrafo del ejemplo, vamos a introducir <b>negrita</b> y <i>cursiva</i></p>
+	<h2>ejemplo 2</h2>
+	<p id="pablo"><small>Este <b>es</b> el segundo <b>párrafo</b> más pequeño</small> </p>
+	<h1>ejemplo 3</h1>
+	<p> Este es el tercer <b>párrafo</b> más grande</p>
+ <script>
+	let info=document.getElementById("informacion");
+	let mostrarh1=document.getElementsByTagName("h1");
+	
+	let todoB=document.getElementsByTagName("b");
+	let todoSmall=document.getElementsByTagName("small");
+	
+	let parrafos=document.getElementsByTagName("p");
+	let parrafo2=parrafos[1];
+	
+	let negritasParr2=parrafo2.getElementsByTagName("b");
+	
+	info.innerHTML="estos son los h1 "+mostrarh1.length;
+	info.innerHTML=info.innerHTML+"<br>El número de negritas es:"+todoB.length;
+	info.innerHTML+="<br>El número de Small son:"+todoSmall.length;
+	info.innerHTML+="<br>El número de b en el párrafo 2 son:"+negritasParr2.length;
+	
+	
+ </script>
+</body>
+</html>
