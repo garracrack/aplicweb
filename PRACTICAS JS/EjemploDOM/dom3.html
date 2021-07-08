@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>JS Example</title>
+	</head>
+	<body>
+		<ul>
+			<li id="frstListElement">Element 1</li>
+			<li>Element 2</li>
+			<li>Element 3</li>
+		</ul>
+		<script>
+			// Obtiene la primera lista (ul)
+			//let ul = document.getElementsByTagName("ul")[0];
+			let ul=document.getElementById("frstListElement").parentNode;
+			// Tercer elemento de la lista (li)
+			let li3 = ul.children[2];
+			// Crea un nuevo elemento de lista
+			let newLi3 = document.createElement("li");
+			// Y le asigna un texto
+			//newLi3.innerText = "Now I'm the third element";
+			let contenido3=document.createTextNode("Now I'm the third element");
+			newLi3.appendChild(contenido3);
+			newLi3.id="nuevoLI";
+			
+			//ul.children[0].id="carolina";
+			ul.children[0].setAttribute("id","carolina");
+			//ul.children[0].className="Victor";
+			ul.children[0].setAttribute("class","Victor");
+			alert(ul.children[0].id);
+			alert(ul.children[0].getAttribute("id"));
+			ul.children[0].style.backgroundColor="red";
+			
+			// Ahora li3 es el cuarto elemento de la lista (newLi3 se inserta antes)
+			ul.insertBefore(newLi3, li3);
+			// Cambiamos el texto para refejar que es el cuarto elemento
+			//li3.innerText = "I'm the fourth element..."; 	
+			ul.removeChild(li3);
+			li3=document.createElement("li");
+			let cont3=document.createTextNode("I'm the fourth element...");
+			li3.appendChild(cont3);
+			ul.appendChild(li3);
+		</script>
+	</body>
+</html>
+
+
+
+

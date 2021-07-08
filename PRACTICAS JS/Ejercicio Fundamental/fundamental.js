@@ -10,10 +10,25 @@
 	}
 	
 	function hacerLista(tabla,filas){
-		document.write("<ul>");
+		let ul=document.createElement("ul");
+		let li;
+		let contenidoLi;
+		ul.id="idLista";
+		for(let i=1;i<=filas;i++){
+			li=document.createElement("li");
+			contenidoLi=document.createTextNode(tabla+"x"+i+"="+(tabla*i));
+			li.appendChild(contenidoLi);
+			ul.appendChild(li);
+			if(i%2==1)
+				li.style.backgroundColor="red";
+			else
+				li.style.backgroundColor="blue";
+		}
+		document.body.appendChild(ul);
+		/*document.write("<ul>");
 		for(let i=1;i<=filas;i++)
 			document.write("<li>"+tabla+"x"+i+"="+(tabla*i)+"</li>");
-		document.write("</ul>");	
+		document.write("</ul>");*/	
 	}
 	
 	function pedirAusuario(cadena, tipo){

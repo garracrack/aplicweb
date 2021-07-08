@@ -4,49 +4,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Ejercicio 11 - DOM b?sico</title>
-<style>
-	p{
-	
-	
-	}
-	
-	p, h1, h2{
-	
-	}
-	
-	
-	
-	.x{
-	
-	}
-	
-	
-	#ident{
-	
-	}
-	
-	#parrafo1 div a{
-	
-	}
-	
-	p+p{
-	
-	}
-	
-</style>
 <script type="text/javascript">
 window.onload = function() {
 	// Numero de enlaces de la pagina
-	
-	let parrafos=document.getElementsByTagName("p");
-	let titulos=document.getElementsByTagName("h1");
-	
-	let titYparr=document.querySelectorAll("p,h1");
-	
-	let claseX=document.querySelectorAll(".x");
-	let claseX=document.getElementsByClassName("x");
-	
-	let enlaces=document.getElementsByTagName("a");
+	//let enlaces=document.getElementsByTagName("a");
+	let enlaces=document.querySelectorAll("a");
 	alert("Número enlaces:"+enlaces.length);
 	// Direccion del penultimo enlace
 	alert("Dire penúltimo:"+enlaces[enlaces.length-2].href);
@@ -57,23 +19,39 @@ window.onload = function() {
 			contador++;
 	alert("El número que apuntan a http://prueba es: "+contador);
 	// Numero de enlaces del tercer p?rrafo
-	let parrafo3=document.getElementsByTagName("p")[2];
-	alert("Numero de enlaces del tercer p:"+parrafo3.getElementsByTagName("a").length);
+	//let parrafo3=document.getElementsByTagName("p")[2];
+	//let parrafo3=document.querySelectorAll("p")[2];
+	let parrafo3=document.querySelector("#parrafo3");
+	/*let parrafo3=document.querySelectorAll("p+p")[1];
+	let parrafo3=document.querySelectorAll("body > p")[2];
+	let parrafo3=document.querySelectorAll("body p")[2];
+	let parrafo3=document.querySelector("p[id$='3']");*/
+	//alert("Numero de enlaces del tercer p:"+parrafo3.getElementsByTagName("a").length);
+	alert("Numero de enlaces del tercer p:"+parrafo3.querySelectorAll("a").length);
 
-	let cuerpo=document.body;
-	let hijos=cuerpo.children;
-	alert(hijos[0].id);
-	alert(hijos[0].nextElementSibling.id);
-	alert(hijos[2].previousElementSibling.id);
+	// Crear nodo de tipo Element
+	let parrafo = document.createElement("p");
+	// Crear nodo de tipo Text
+	let contenido = document.createTextNode("Hola Mundo!");
+	// Añadir el nodo Text como hijo del nodo Element
+	parrafo.appendChild(contenido);
+	// Añadir el nodo Element como hijo de la pagina
+	//document.body.appendChild(parrafo); 
+	let parrafo2=document.getElementById("parrafo2");
+
+	parrafo2.parentNode.replaceChild(parrafo,parrafo2);
 	
-	let enlaceX=document.getElementsByClassName("x")[0];
-	alert(enlaceX.parentNode.id);
-
+	let titulo=document.body.children[0];
+	titulo.parentNode.removeChild(titulo);
+	
+	
 }
 </script>
 </head>
 <body>
-<p id="parrafo1"><div>Lorem ipsum dolor sit amet, <a href="http://prueba">consectetuer adipiscing
+<h1>ssss</h1>
+<p id="parrafo1"><a href="http://prueba">consectetuer adipiscing
+elit</a><div>Lorem ipsum dolor sit amet, <a href="http://prueba">consectetuer adipiscing
 elit</a>. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat
 congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae,
 rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
@@ -105,5 +83,6 @@ href="http://prueba4">egestas</a> adipiscing ligula. Duis iaculis laoreet turpis
 Mauris mollis est sit amet diam. Curabitur hendrerit, eros quis malesuada tristique,
 ipsum odio euismod tortor, a vestibulum nisl mi at odio. <a href="http://prueba5">Sed
 non lectus non est pellentesque</a> auctor.</p>
+
 </body>
 </html>
