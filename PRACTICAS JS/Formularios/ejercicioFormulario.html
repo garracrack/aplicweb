@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Head First Lounge Directions</title>
+	<link rel="stylesheet" href="../lounge.css">
+	<meta charset="utf-8">
+	<style>
+		label{
+			display: block;
+			
+			padding:5px;
+	
+			
+		}
+		input:focus
+		{
+			border: 2px solid #000;
+			background: #F3F3F3;
+		} 
+	</style>
+	<script>
+		console.log("HOLA EOI");
+	</script>
+	<script>
+		function validar(){
+			let f=document.formu;
+			
+			if(f.nombre.value==""){
+				alert("Error el nombre no puede quedar vacío");
+				f.nombre.focus();
+				return false;
+			}
+			if(f.nombre.value.length>10){
+				alert("Error el nombre no puede tener más de 10 caracteres");
+				f.nombre.value="";
+				f.nombre.focus();
+				return false;
+			}
+			if(f.apellidos.value==""){
+				alert("Error los apellidos no pueden quedar vacíos");
+				f.apellidos.focus();
+				return false;
+			}
+			if(isNaN(f.telefono.value) || f.telefono.value==""){
+				alert("Error el teléfono debe ser numérico");
+				f.telefono.focus();
+				return false;			
+			}
+			if(f.correo.value==f.correoAlter.value){
+				alert("Error correo alternativo debe ser distinto del correo");
+				f.correoAlter.focus();
+				return false;			
+			}
+			if(!f.Declaracion.checked){
+				alert("Debe marcar la declaración");
+				f.Declaracion.focus();
+				return false;			
+			}		
+			
+		}
+	</script>
+  </head>
+  <body>
+	
+	<h1>Formulario de registro - Mi web</h1>
+	<form name="formu" action="pagina2.html" method="get" onsubmit="return validar();">
+		<fieldset>
+			<legend>Datos Personales</legend>
+			<label>Nombre:<input name="nombre" type="text" maxlength=50 required></label>
+			<label>Apellidos:
+				<input name="apellidos" type="text" maxlength=50 required>
+			</label>
+			<label>Teléfono:<input name="telefono" type="number" required></label>
+			<label>Sexo:HOMBRE<input name="sexo" type="radio" value="H">
+			MUJER<input name="sexo" type="radio" value="M"></label>
+			<label>Correo:<input name="correo" type="email" required></label>
+			<label>Correo Alternativo:<input name="correoAlter" type="email" required></label>
+			<label> Población:
+				<select name="pais" required>
+					<option value="">-- Elige un País --</option>
+					<option value="AL">Alicante</option>
+					<option value="MA">Madrid</option>
+					<option value="SE">Sevilla</option>
+					<option value="VA">Valencia</option>
+				</select>
+			</label>
+			<label>Descripción:
+				<textarea></textarea>
+			</label>
+		</fieldset>
+			
+		<fieldset>
+			<legend>Acciones</legend>
+	
+			<label>
+				<input name="ofertas" type="checkbox" value="Oferta" checked>
+				Deseo recibir información sobre novedades y ofertas
+			</label>	
+			<label>
+				<input name="Declaracion" type="checkbox" value="Dec">
+				Declaro haber leido y aceptar las condiciones
+				generales del programa y la normativa sobre protección de datos
+			</label>	
+			<input type="submit" value="ENVIAR" name="enviar">
+
+	</fieldset>
+	</form>
+	
+	
+	
+	
+  </body>
+</html>

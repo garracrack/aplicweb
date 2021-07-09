@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOGIN</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/validaciones.js"></script>
+
+  </head>
+  <body>
+	
+	<h1>Formulario de Acceso</h1>
+	<form name="forLogin" action="login2.html" method="get" onsubmit="return validarLogin();">
+		<fieldset>
+			<legend>Acceso Página</legend>
+			<label>Login:<input name="login" type="text" required></label>
+			<label>Password:<input name="password" type="text" minlength=6 required></label>
+			<p><a href="registro.html">¿Requiere registrarse?</a></p>
+			<input type="submit" value="ACCEDER" name="acceder">
+		</fieldset>
+	</form>
+	<div id="errores" style="border:1px solid black;"></div>
+	
+	
+	
+	
+  </body>
+</html>

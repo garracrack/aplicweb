@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>REGISTRO</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<meta charset="utf-8">
+	<script></script>
+
+  </head>
+  <body>
+	
+	<h1>Formulario de registro</h1>
+	<form name="forRegistro" action="registrar2.html" method="get" onsubmit="return validar();">
+		<fieldset>
+			<legend>Registrar Usuario</legend>
+			<label>Login:<input name="login" type="text" maxlength=50 required></label>
+			<label>Password:<input name="password" type="text" minlength=6 required></label>
+			<label>Repetir Password:<input name="repePassword" type="text" maxlength=50 required></label>
+			<label>Email:<input name="email" type="email" maxlength=50 required></label>
+			<label>Fecha Nacimiento:<input name="nacimiento" type="date" maxlength=50 required></label>
+			<input type="submit" value="REGISTRAR" name="acceder">
+		</fieldset>
+	</form>

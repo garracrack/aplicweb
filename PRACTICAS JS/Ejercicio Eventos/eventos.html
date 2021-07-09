@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Prueba Eventos</title>
+  </head> 
+  <body>
+		<h1>Programa Resumen HTML/JAVASCRIPT</h1>
+		<img id="imagen" src="mickey.png" alt="disney">
+		<script>
+			/*function cambiarPluto(){
+				this.src="Pluto.png";
+			}
+			function cambiarMickey(){
+				this.src="mickey.png";
+			}*/
+			function cambiarImagen(elemento,foto){
+				elemento.src=foto;
+			}
+		
+			let imagen=document.getElementById("imagen");
+			/*let imagen=document.querySelector("#imagen");
+			let imagen=document.getElementByTagName("img")[0];
+			let imagen=document.body.children[1];
+			let imagen=document.querySelector("img");
+			let imagen=document.querySelectorAll("img")[0];
+			let imagen=document.querySelector("h1+img");
+			
+			imagen.onmouseover=cambiarPluto;
+			imagen.addEventListener("mouseout",cambiarMickey);*/
+			
+			imagen.onmouseover=function(){
+									cambiarImagen(this,"Pluto.png");
+								};
+			imagen.addEventListener("mouseout",function(){
+												cambiarImagen(this,"mickey.png");
+												});
+		
+		</script>	
+  </body>
+</html>
+
