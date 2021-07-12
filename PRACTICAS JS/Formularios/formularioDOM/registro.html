@@ -4,13 +4,13 @@
     <title>REGISTRO</title>
 	<link rel="stylesheet" href="css/estilos.css">
 	<meta charset="utf-8">
-	<script></script>
+	<script src="js/validaciones.js"></script>
 
   </head>
   <body>
 	
 	<h1>Formulario de registro</h1>
-	<form name="forRegistro" action="registrar2.html" method="get" onsubmit="return validar();">
+	<form name="forRegistro" action="registro2.html" method="get" onsubmit="return validarRegistro();">
 		<fieldset>
 			<legend>Registrar Usuario</legend>
 			<label>Login:<input name="login" type="text" maxlength=50 required></label>
@@ -21,3 +21,4 @@
 			<input type="submit" value="REGISTRAR" name="acceder">
 		</fieldset>
 	</form>
+	<div id="errores"></div>
