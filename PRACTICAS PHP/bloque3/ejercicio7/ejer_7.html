@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<script type="text/javascript">
+		window.onload = function() {
+			document.tabla.onsubmit=validar;
+		}
+		
+		function validar(){
+			var cantidad = document.tabla.cantidad.value;
+			
+			if (cantidad =="" )
+			{
+				alert("Hay que indicar la cantidad");
+				return false;
+			}
+			else if( isNaN (cantidad))
+			{
+				alert("Debe ser un número");
+				return false;
+			}
+			else if(cantidad >5)
+			{
+				alert("La cantidad no debe superar los 5 elementos");
+				return false;
+			}
+			
+		}
+	</script>
+</head>
+<body>
+<form name="tabla" action="ejer_7_f2.php" method="post">
+<h1>Generador de Formularios (Formulario 1)</h1>
+<p>Escribe el número de controles que va a tener el formulario</p>
+<strong>Número de controles:</strong> <input type="text" name="cantidad" />
+<p>
+<input type="submit" value="Enviar" />
+<input type="reset" value="Borrar" />
+</p>
+
+</form>
+</body>
+</html>

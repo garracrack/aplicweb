@@ -1,0 +1,26 @@
+body{
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+form{
+	border:1px dotted blue;	
+}
+
+h1{
+	color:blue;
+}
+
+label{
+	display:block;
+	padding:5px;
+}
+
+p{
+	color:red;
+}
+
+.texto{
+	color:black;
+}

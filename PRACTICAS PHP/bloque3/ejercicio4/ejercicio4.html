@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viviendas</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="estilos.css">
+  </head>
+  <body>
+	<h1>Inserción de Vivienda</h1>
+	<p>Introduzca los datos de la vivienda:</p>
+	<form name="forVivienda" action="ejercicio4.php" method="get">
+		<label>Tipo de Vivienda:
+			<select name="tipo">
+				<option value="Piso">Piso</option>
+				<option value="Adosado">Adosado</option>
+				<option value="Chalet">Chalet</option>
+				<option value="Casa">Casa</option>
+			</select>
+		</label> 
+		<label>Zona:
+			<select name="zona">
+				<option value="Centro">Centro</option>
+				<option value="Nervión">Nervión</option>
+				<option value="Triana">Triana</option>
+				<option value="Aljarafe">Aljarafe</option>
+				<option value="Macarena">Macarena</option>
+			</select>
+		</label> 		
+		<label>Dirección:<input type="text" name="direccion"></label>
+		<label>Número de dormitorios:
+			<input type="radio" name="dormitorios" value="1">1
+			<input type="radio" name="dormitorios" value="2">2
+			<input type="radio" name="dormitorios" value="3">3
+			<input type="radio" name="dormitorios" value="4">4
+			<input type="radio" name="dormitorios" value="5">5
+		</label>
+		<label>Precio:<input type="text" name="precio">€</label>
+		<label>Tamaño:<input type="text" name="tamanyo">metros cuadrados</label>
+		<label>Extras(marque los que proceda):
+			<input type="checkbox" name="extra[]" value="Piscina">Piscina
+			<input type="checkbox" name="extra[]" value="Jardin">Jardín
+			<input type="checkbox" name="extra[]" value="Garaje">Garaje
+		</label>
+		<label>Observaciones:<textarea name="observaciones"></textarea></label>
+		<input type="submit" name="enviar" value="Insertar Vivienda">
+	</form>
+  </body>
+ </html>
